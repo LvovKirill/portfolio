@@ -1,0 +1,604 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    cursor: url(./icons/cursor-default.svg), auto;
+}
+
+@font-face {
+	font-family: 'Inter'; 
+	src: url(./fonts/Inter-VariableFont_opsz\,wght.ttf); 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+body{
+    background-color: rgb(49, 49, 49);
+    padding-inline: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@media (max-width: 683px) {
+    body{
+    padding-inline: 30px;
+    position: relative;
+    }
+
+
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар для Webkit */
+}
+
+p{
+    font-size: 100px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 80px;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1290px) {
+    .info-container{
+        flex-direction: column-reverse;
+    }
+
+}
+
+.info-img{
+    width: 650px;
+}
+
+.logo-img{
+    width: 380px;
+}
+
+@media (max-width: 600px) {
+    .info-img{
+        width: 300px;
+        margin-left: 30px;
+    }
+
+    .info-container{
+        flex-direction: column;
+    }
+
+}
+
+.skills-block__title{
+    font-family: 'Inter';
+    font-size: 66px;
+    color: white;
+    margin-top: 170px;
+    z-index: -100;
+}
+
+.skills-block__skills-type{
+    background-color: white;
+    color: rgb(20, 124, 241);
+    border-radius: 30px;
+    font-family: 'Inter';
+    font-size: 30px;
+    margin-top: 72px;
+    padding-inline: 25px;
+    padding-block: 10px;
+    /* width: min-content; */
+    text-wrap: nowrap;
+}
+
+.skills-block__skills-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: visible;
+    margin-right: 20vw;
+}
+
+.skills-block__skill-container{
+    background-color: rgb(70, 70, 70);
+    padding: 10px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+.skills-block__skill-container:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.skills-block__skill-icon{
+    height: 40px;
+    max-width: 50px;
+}
+
+.skills-block__skill-name{
+    font-family: 'Inter';
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    cursor: url(./icons/cursor-default.svg), auto;
+}
+
+@media (max-width: 1200px) {
+    .skills-block__skills-container{
+        margin-right: 10vw;
+    }
+}
+
+@media (max-width: 683px) {
+
+    .skills-block__title{
+        font-size: 50px;
+        width: 310px;
+    }
+    
+    .skills-block__skills-container{
+        margin-right: 0;
+    }
+
+    .skills-block__skill-icon{
+        height: 25px;
+        max-width: 40px;
+    }
+    
+    .skills-block__skill-name{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .skills-block__skills-type{
+        font-size: 18px;
+    }
+
+}
+
+.menu-item-profile{
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    z-index: -1;
+    cursor: pointer;
+    animation: pulse 4s infinite;
+}
+
+.menu-item-skills{
+    position: fixed;
+    top: 80px;
+    right: 400px;
+    z-index: -1;
+    cursor: pointer;
+    cursor: pointer;
+    animation: pulse 3s infinite;
+    cursor: url(./icons/cursor-pointer-skills.svg) 27 0, auto;
+
+}
+
+.menu-item-hobby{
+    position: fixed;
+    bottom: 100px;
+    left: 250px;
+    z-index: -1;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: 1s;
+}
+
+.menu-item-hobby:hover{
+    transform: scale(1.2);
+    animation: none;
+    transition: 1s;
+}
+
+.menu-item-contact{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: -1;
+    cursor: pointer;
+    animation: pulse 5s infinite;
+}
+
+@media (max-width: 1290px) {
+
+    .menu-item-profile{
+        top: 120px;
+    }
+
+    .menu-item-skills{
+        right: 45vw;
+    }
+
+    .menu-item-hobby{
+        left: 15vw;
+    }
+
+}
+
+.hobby__title{
+    font-family: 'Inter';
+    font-size: 66px;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 500px;
+    z-index: -100;
+    text-align: center;
+    align-self: self-end;
+    justify-self: right;
+    margin-left: auto;
+}
+
+.hobby__block{
+    background-color: rgb(70, 70, 70);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: visible;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-block: 30px;
+}
+
+.hobby__text{
+    font-size: 20px;
+    font-family: 'Inter';
+    width: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.hobby__image-1{
+    width: 550px;
+    margin-top: -100px;
+    margin-bottom: -90px;
+}
+
+.hobby__image{
+    max-width: 350px;
+    align-self: center;
+}
+
+@media (max-width: 1209px) {
+
+    .hobby__block{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hobby__block-right{
+        flex-direction: column-reverse;
+    }
+
+    .hobby__text{
+        width: auto;
+        margin-inline: 100px;
+    }
+
+    .hobby__title{
+        margin-bottom: 120px;
+        width: max-content;
+        z-index: -100;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        margin-left: 0;
+    }
+
+    .hobby__image-1{
+        width: 60vw;
+    }
+    
+    .hobby__image{
+        width: 60vw;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .hobby__title{
+        width: 500px;
+    }
+
+}
+
+
+
+.tg{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-right: 160px; */
+    overflow: visible;
+}
+
+.tg__ava{
+    width: 130px;
+    height: 130px;
+}
+
+.tg__info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow: visible;
+}
+
+.tg__name{
+    font-family: 'Inter';
+    font-size: 30px;
+    color: white;
+    text-align: left;
+}
+
+.tg__text{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    margin-top: 20px;
+}
+
+.tg__button{
+    background-color: rgb(70, 70, 70);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    margin-top: 20px;
+    cursor: url(./icons/cursor-pointer.svg) 7 0, auto;
+    width: min-content;
+    transition: 0.5s;
+}
+
+.tg__button:hover{
+
+    box-shadow: 0 0 15px rgb(33, 255, 148, 0.5);
+    transition: 0.5s;
+    /* transform: scale(1.03); */
+
+}
+
+.tg__button-text{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+    cursor: url(./icons/cursor-pointer.svg) 7 0, auto;
+}
+
+@media (max-width: 1170px) {
+    .tg{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .tg__info{
+        align-items: center;
+    }
+
+    .tg__text{
+        text-align: center;
+    }
+
+    .tg__name{
+        text-align: center;
+    }
+}
+
+.contacts__title{
+    align-self: center;
+    font-family: 'Inter';
+    font-size: 66px;
+    color: white;
+    margin-top: 100px;
+}
+
+.contacts__container{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contacts__contact{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.contacts__contact-icon{
+   width: 40px; 
+}
+
+.contacts__contact-text{
+    font-family: 'Inter';
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+}
+
+.contacts__form{
+    align-self: center;
+    background-color: rgb(70, 70, 70);
+    border-radius: 20px;
+    padding-inline: 30px;
+    padding-block: 30px;
+    margin-top: 40px;
+    width: min-content;
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 780px;
+}
+
+.contacts__form-title{
+    font-family: 'Inter';
+    font-size: 30px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contacts__field-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    overflow: visible;
+    margin-bottom: 30px;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+.contacts__field{
+    position: relative;
+    overflow: visible;
+    width: 50%;
+}
+
+.contacts__field-message{
+    position: relative;
+    overflow: visible;
+    width: 100%;
+}
+
+.contacts__name-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    top: -18px;
+    left: 15px;
+    background-color: rgb(70, 70, 70);
+    padding-inline: 10px;
+}
+
+.contacts__field-name{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+}
+
+.contacts__field-required{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: rgb(33, 255, 148);
+}
+
+.contacts__field-input{
+    box-sizing: border-box;
+    background-color: rgb(70, 70, 70);
+    height: 50px;
+    flex-grow: 1;
+    width: 100%;
+    border: 1.5px solid rgb(49, 146, 255);
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    padding-inline: 15px;
+}
+
+.contacts__send-button{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+    width: min-content;
+    background-color: rgb(49, 146, 255);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    cursor: url(./icons/cursor-pointer.svg) 7 0, auto;
+}
+
+.contacts__field-input-message{
+    box-sizing: border-box;
+    background-color: rgb(70, 70, 70);
+    height: 150px;
+    flex-grow: 1;
+    border: 1.5px solid rgb(49, 146, 255);
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    padding-inline: 15px;
+    padding-block: 10px;
+    width: 100%;
+    resize: none;
+}
+
+@media (max-width: 620px) {
+    .contacts__send-button{
+        margin-inline: auto;
+    }
+
+    .contacts__form-title{
+        text-align: center;
+    }
+
+    .contacts__container{
+        align-self: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .contacts__field-container{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contacts__field{
+        width: 100%;
+    }
+
+}
+
+.footer__logo{
+    align-self: center;
+    width: 200px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
