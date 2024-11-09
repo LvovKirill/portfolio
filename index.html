@@ -12,6 +12,7 @@
     <img class="menu-item-skills" src="./icons/skills-icon.svg"></img>
     <img class="menu-item-hobby" src="./icons/hobby-icon.svg"></img>
     <img class="menu-item-contact" src="./icons/contact-icon.svg"></img>
+    <img class="menu-item" src="./icons/menu-icon.svg"></img>
 
     <div class="info-container">
         <img class="logo-img" src="./images/logo.svg"></img>
@@ -277,4 +278,34 @@ window.addEventListener('resize', updateImageBasedOnScreenSize);
 
 
 </script>
+
+
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const menuItem = document.querySelectorAll('.menu-item')[0];
+
+    const profileItem = document.querySelector('.menu-item-profile');
+    const skillsItem = document.querySelector('.menu-item-skills');
+    const hobbyItem = document.querySelector('.menu-item-hobby');
+    const contactItem = document.querySelector('.menu-item-contact');
+
+
+    menuItem.addEventListener('click', function () {
+        profileItem.classList.toggle('open');
+        skillsItem.classList.toggle('open');
+        hobbyItem.classList.toggle('open');
+        contactItem.classList.toggle('open');
+    });
+
+});
+
+    
+</script>
+
+
+
 </html>
